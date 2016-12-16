@@ -7,4 +7,9 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+  it('should remove all vowels', function() {
+    var results = $filter('removeAllVowels')('audiobox');
+
+    expect(results).toEqual('dbx');
+  });
 });
